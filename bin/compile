@@ -1,0 +1,8 @@
+
+BUILD_DIR=$1
+
+cd $BUILD_DIR
+
+echo "-----> Compiling all typescript files"
+
+(PATH="$BUILD_DIR/node_modules/.bin:$PATH" && tsc)
