@@ -3,8 +3,6 @@ BUILD_DIR=$1
 
 cd $BUILD_DIR
 
-npm install tsc
-
 echo "-----> Compiling all typescript files"
 
-(PATH="$BUILD_DIR/node_modules/.bin:$PATH" && tsc)
+(PATH="$BUILD_DIR/vendor/node/bin:$BUILD_DIR/bin:$BUILD_DIR/node_modules/.bin:$PATH" && npm install tsc && tsc)
